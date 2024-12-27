@@ -1,0 +1,24 @@
+
+
+ <div class="container">
+    <a routerLink="/app-product-list">Go to Product List</a>
+    <br>
+    <br>
+<div class="create-product-form">
+    <h3>Create New Product</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="productName" class="form-label">Product Name</label>
+        <input type="text" class="form-control" id="productName" [(ngModel)]="newProduct.name" name="productName" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="productPrice" class="form-label">Price</label>
+        <input type="number" class="form-control" id="productPrice" [(ngModel)]="newProduct.price" name="productPrice" required>
+      </div>
+  
+      <button type="submit" class="btn btn-success">  {{ newProduct.id > 0 ? 'Update Product' : 'Create Product' }}</button>
+    </form>
+  </div>
+</div>
+  
